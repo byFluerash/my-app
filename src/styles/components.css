@@ -2,7 +2,7 @@
 h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: #9fa450;
   margin-bottom: 50px;
   position: relative;
   text-align: center;
@@ -17,7 +17,7 @@ h2:after {
   content: "";
   height: 2px;
   width: 40px;
-  background: #2c3e50;
+  background: #9fa450;
   margin: 0 30px;
 }
 
@@ -32,6 +32,18 @@ h2:after {
 .header h2:before,
 .header h2:after {
   background: #FFFFF0;
+}
+
+.header .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  background: none;
 }
 
 /* Адаптивность для мобильных устройств */
@@ -106,12 +118,28 @@ h2:after {
 
 .about {
   padding: 80px 0;
-  background: #FFFFF0;
-  color: #2c3e50;
+  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
+  color: #9fa450;
 }
 
 .about .container {
   max-width: 800px;  /* Уменьшаем ширину контейнера для лучшей читаемости */
+}
+
+.about:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(254, 106, 0, 0.1),  /* Оранжевый */
+    transparent
+  );
 }
 
 .couple-story {
@@ -139,126 +167,189 @@ h2:after {
 
 .rsvp {
   padding: 80px 0;
-  background-color: #FFFFF0;
-  color: #2c3e50;
+  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
+}
+
+.rsvp:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(254, 106, 0, 0.1),  /* Оранжевый */
+    transparent
+  );
 }
 
 .rsvp-form {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px;
-  background: #FFFFF0;
-  border-radius: 15px;
+  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(254, 106, 0, 0.05);  /* Оранжевая тень */
 }
 
+/* Основная форма гостя */
 .guest-form {
   padding: 30px;
   margin-bottom: 40px;
   border-radius: 15px;
-  background: #FFFFF0;
-  border: 1px solid rgba(44, 62, 80, 0.1);
+  background: rgba(253, 222, 82, 0.03);  /* Нежный горчичный фон */
+  border: 1px solid rgba(254, 106, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Группы полей */
+.guest-form:hover {
+  box-shadow: 0 4px 15px rgba(241, 167, 120, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Секции формы */
 .form-section {
-  margin-bottom: 25px;
-  padding: 15px;
-  background: #FFFFF0;
-  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(159, 164, 80, 0.02);  /* Очень нежный оливковый фон */
+  border-radius: 12px;
+  border: 1px solid rgba(241, 167, 120, 0.1);
 }
 
 .form-section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
-  color: #2c3e50;
-  margin-bottom: 15px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(44, 62, 80, 0.1);
+  color: #9fa450;  /* Оливковый */
+  border-bottom: 2px solid rgba(254, 106, 0, 0.1);  /* Подчеркивание оранжевым */
 }
 
 /* Поля ввода */
 .form-input,
-.form-select {
-  width: 100%;
-  padding: 12px 15px;
-  border: 2px solid rgba(44, 62, 80, 0.15);
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-family: 'Cormorant Garamond', serif;
+.form-select,
+.form-textarea {
   background: #FFFFF0;
-  transition: all 0.3s ease;
-}
-
-.form-input:hover,
-.form-select:hover {
-  border-color: rgba(44, 62, 80, 0.3);
+  border: 1px solid rgba(241, 167, 120, 0.2);
 }
 
 .form-input:focus,
-.form-select:focus {
-  border-color: #2c3e50;
-  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
-  outline: none;
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #fe6a00;  /* Яркий оранжевый */
+  box-shadow: 0 0 0 3px rgba(241, 167, 120, 0.1);  /* Тень цвета мандарина */
 }
 
 /* Чекбоксы */
 .checkbox-group {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  gap: 12px;
   margin-top: 15px;
 }
 
 .checkbox-label {
-  padding: 10px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: rgba(253, 222, 82, 0.02);  /* Очень нежный горчичный фон */
+  border: 1px solid rgba(241, 167, 120, 0.1);
 }
 
 .checkbox-label:hover {
-  background-color: rgba(44, 62, 80, 0.05);
+  background: rgba(241, 167, 120, 0.05);  /* Нежный мандариновый при наведении */
+  border-color: rgba(254, 106, 0, 0.2);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #fe6a00;  /* Яркий оранжевый */
 }
 
 /* Кнопки */
 .submit-button,
-.add-companion-btn {
-  padding: 15px 30px;
+.add-companion-btn,
+.remove-companion-btn {
+  padding: 12px 25px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.2rem;
   border-radius: 8px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .submit-button {
-  background: #2c3e50;
-  color: white;
+  background: linear-gradient(45deg, #fe6a00, #f1a778);  /* Градиент от оранжевого к мандариновому */
+  color: #FFFFF0;
   border: none;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(254, 106, 0, 0.2);
 }
 
 .submit-button:hover {
-  background: #34495e;
-  transform: translateY(-2px);
+  background: linear-gradient(45deg, #f1a778, #fe6a00);  /* Инвертированный градиент при наведении */
+  box-shadow: 0 6px 20px rgba(254, 106, 0, 0.3);
 }
 
 .add-companion-btn {
-  background: none;
-  border: 2px dashed #2c3e50;
-  color: #2c3e50;
+  background: rgba(253, 222, 82, 0.05);  /* Нежный горчичный фон */
+  border: 2px dashed rgba(254, 106, 0, 0.3);
+  color: #fe6a00;
+  width: 100%;
   margin-top: 20px;
 }
 
 .add-companion-btn:hover {
-  background: rgba(44, 62, 80, 0.05);
+  background: rgba(241, 167, 120, 0.1);
+  border-color: #fe6a00;
   transform: translateY(-2px);
+}
+
+.remove-companion-btn {
+  background: linear-gradient(45deg, #f1a778, #fe6a00);  /* Градиент от мандаринового к оранжевому */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.remove-companion-btn:hover {
+  background: linear-gradient(45deg, #fe6a00, #f1a778);
+  opacity: 1;
+}
+
+/* Сообщение об успешной отправке */
+.success-message {
+  text-align: center;
+  background: rgba(159, 164, 80, 0.05);  /* Очень легкий оливковый */
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(241, 167, 120, 0.1);  /* Тень цвета мандарина */
+  border: 1px solid rgba(159, 164, 80, 0.2);
+}
+
+.success-message h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  color: #9fa450;  /* Оливковый */
+  margin-bottom: 20px;
+}
+
+.success-message p {
+  font-size: 1.3rem;
+  color: #fe6a00;  /* Яркий оранжевый */
+  line-height: 1.6;
 }
 
 /* Адаптивность */
 @media (max-width: 768px) {
   .rsvp-form {
-    padding: 20px;
-  }
-
-  .guest-form {
     padding: 20px;
   }
 
@@ -269,32 +360,19 @@ h2:after {
   .checkbox-group {
     grid-template-columns: 1fr;
   }
-}
 
-.success-message {
-  text-align: center;
-  background: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.success-message h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-.success-message p {
-  font-size: 1.2rem;
-  color: #2c3e50;
+  .submit-button,
+  .add-companion-btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
 }
 
 .footer {
   text-align: center;
   padding: 40px 0;
-  background-color: #343a40;
+  background: rgba(254, 106, 0, 0.05);  /* Нежный оранжевый фон */
+  border-top: 1px solid rgba(254, 106, 0, 0.1);
   color: white;
 }
 
@@ -337,26 +415,35 @@ h2:after {
   margin-top: 5px;
 }
 
+/* Секция сопровождающих */
 .companions-section {
   margin: 40px 0;
   padding: 20px;
-  background: #f8f9fa;
+  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
   border-radius: 8px;
+  border: 1px solid rgba(254, 106, 0, 0.1);
 }
 
 .companions-section h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
   margin-bottom: 30px;
-  color: #2c3e50;
+  color: #9fa450;  /* Оливковый */
+  text-align: center;
 }
 
 .companion-wrapper {
   margin-bottom: 40px;
   border-radius: 10px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
+  background: rgba(253, 222, 82, 0.03);  /* Нежный горчичный фон */
+  border: 1px solid rgba(241, 167, 120, 0.1);
+  transition: all 0.3s ease;
+}
+
+.companion-wrapper:hover {
+  box-shadow: 0 4px 15px rgba(241, 167, 120, 0.1);
+  transform: translateY(-2px);
 }
 
 .companion-header {
@@ -364,36 +451,56 @@ h2:after {
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
-  background: rgba(44, 62, 80, 0.05);
-  border-bottom: 1px solid rgba(44, 62, 80, 0.1);
+  background: rgba(241, 167, 120, 0.05);  /* Нежный мандариновый фон */
+  border-bottom: 1px solid rgba(254, 106, 0, 0.1);
 }
 
 .companion-header h4 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.6rem;
-  color: #2c3e50;
+  color: #9fa450;  /* Оливковый */
   margin: 0;
 }
 
-.remove-companion-btn {
-  background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
-}
+/* Адаптивность */
+@media (max-width: 768px) {
+  .companions-section {
+    padding: 15px;
+  }
 
-.remove-companion-btn:hover {
-  background: #c0392b;
+  .companions-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .companion-header {
+    padding: 15px 20px;
+  }
+
+  .companion-header h4 {
+    font-size: 1.3rem;
+  }
 }
 
 .color-scheme {
   padding: 80px 0;
-  background: #FFFFF0;
-  color: #2c3e50;
+  background: rgba(159, 164, 80, 0.02);  /* Очень нежный оливковый фон */
+  color: #9fa450;
+}
+
+.color-scheme:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(254, 106, 0, 0.1),  /* Оранжевый */
+    transparent
+  );
 }
 
 .color-description {
@@ -430,12 +537,13 @@ h2:after {
 
 .color-circle:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(254, 106, 0, 0.2);
 }
 
 .color-item span {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
-  color: #2c3e50;
+  color: #9fa450;
   text-align: center;
 }
 
@@ -483,7 +591,7 @@ h2:after {
   margin-bottom: 12px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.2rem;
-  color: #2c3e50;
+  color: #9fa450;
   font-weight: 500;
 }
 
@@ -492,7 +600,7 @@ h2:after {
 .form-textarea {
   width: 100%;
   padding: 15px;
-  border: 1px solid rgba(44, 62, 80, 0.2);
+  border: 1px solid rgba(159, 164, 80, 0.2);
   border-radius: 8px;
   font-size: 1.1rem;
   font-family: 'Cormorant Garamond', serif;
@@ -503,9 +611,9 @@ h2:after {
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
-  border-color: #2c3e50;
+  border-color: #fe6a00;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+  box-shadow: 0 0 0 3px rgba(241, 167, 120, 0.2);
 }
 
 .form-textarea {
@@ -528,7 +636,7 @@ h2:after {
   cursor: pointer;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;
-  color: #2c3e50;
+  color: #9fa450;
   transition: color 0.3s ease;
 }
 
@@ -540,7 +648,7 @@ h2:after {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: #2c3e50;
+  accent-color: #fe6a00;
 }
 
 @media (max-width: 768px) {
@@ -571,8 +679,24 @@ h2:after {
 
 .transfer {
   padding: 80px 0;
-  background: #FFFFF0;
-  color: #2c3e50;
+  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
+  color: #9fa450;
+}
+
+.transfer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(254, 106, 0, 0.1),  /* Оранжевый */
+    transparent
+  );
 }
 
 .transfer-content {
@@ -589,7 +713,7 @@ h2:after {
 
 .transfer-item {
   padding: 30px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(253, 222, 82, 0.05);
   border-radius: 15px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
@@ -597,7 +721,7 @@ h2:after {
 .transfer-item h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
-  color: #2c3e50;
+  color: #9fa450;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -610,7 +734,7 @@ h2:after {
 }
 
 .transfer-item strong {
-  color: #2c3e50;
+  color: #9fa450;
   font-weight: 600;
 }
 
@@ -648,8 +772,24 @@ h2:after {
 
 .gifts {
   padding: 80px 0;
-  background: #FFFFF0;
-  color: #2c3e50;
+  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
+  color: #9fa450;
+}
+
+.gifts:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(254, 106, 0, 0.1),  /* Оранжевый */
+    transparent
+  );
 }
 
 .gifts-content {
@@ -671,7 +811,7 @@ h2:after {
 
 .gifts-note {
   padding: 30px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(253, 222, 82, 0.05);
   border-radius: 15px;
   margin-top: 40px;
 }
@@ -680,7 +820,7 @@ h2:after {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
   line-height: 1.8;
-  color: #2c3e50;
+  color: #9fa450;
   font-style: italic;
 }
 
@@ -706,8 +846,24 @@ h2:after {
 
 .venue {
   padding: 80px 0;
-  background: #FFFFF0;
-  color: #2c3e50;
+  background: rgba(159, 164, 80, 0.02);  /* Очень нежный оливковый фон */
+  color: #9fa450;
+}
+
+.venue:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(254, 106, 0, 0.1),  /* Оранжевый */
+    transparent
+  );
 }
 
 .venue-content {
@@ -724,15 +880,15 @@ h2:after {
 
 .venue-item {
   padding: 30px;
-  background: #FFFFF0;
-  border: 1px solid rgba(44, 62, 80, 0.1);
+  background: rgba(253, 222, 82, 0.05);
+  border: 1px solid rgba(159, 164, 80, 0.2);
   border-radius: 15px;
 }
 
 .venue-item h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
-  color: #2c3e50;
+  color: #9fa450;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -745,7 +901,7 @@ h2:after {
 }
 
 .venue-item strong {
-  color: #2c3e50;
+  color: #9fa450;
   font-weight: 600;
 }
 
@@ -808,4 +964,60 @@ h2:after {
     font-size: 1.1rem;
     padding: 20px;
   }
+}
+
+/* Общий фон для всей страницы */
+body {
+  background: rgba(253, 222, 82, 0.02);  /* Очень нежный горчичный фон */
+}
+
+/* Обновляем фон для всех секций */
+.about, 
+.venue, 
+.transfer, 
+.color-scheme, 
+.gifts, 
+.rsvp {
+  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
+  position: relative;
+}
+
+/* Добавляем разделители между секциями */
+.about:before, 
+.venue:before, 
+.transfer:before, 
+.color-scheme:before, 
+.gifts:before, 
+.rsvp:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(254, 106, 0, 0.1),  /* Оранжевый */
+    transparent
+  );
+}
+
+/* Чередуем фоны секций для визуального разделения */
+.venue,
+.color-scheme,
+.rsvp {
+  background: rgba(159, 164, 80, 0.02);  /* Очень нежный оливковый фон */
+}
+
+/* Оставляем хедер без изменений, так как у него своя фоновая картинка */
+.header {
+  background-color: #f8f9fa;  /* Оставляем как есть */
+}
+
+/* Обновляем фон футера */
+.footer {
+  background: rgba(254, 106, 0, 0.05);  /* Нежный оранжевый фон */
+  border-top: 1px solid rgba(254, 106, 0, 0.1);
 } 
