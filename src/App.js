@@ -8,17 +8,33 @@ import Gifts from './components/Gifts';
 import Rsvp from './components/Rsvp';
 import Footer from './components/Footer';
 import Venue from './components/Venue';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <div>
+      <Navigation />
+      <section id="header">
       <Header />
-      <About />
-      <Venue />
-      <Transfer />
-      <ColorScheme />
-      <Gifts />
-      <Rsvp />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="venue">
+        <Venue />
+      </section>
+      <section id="transfer">
+        <Transfer />
+      </section>
+      <section id="color-scheme">
+        <ColorScheme />
+      </section>
+      <section id="gifts">
+        <Gifts />
+      </section>
+      <section id="rsvp">
+        <Rsvp />
+      </section>
       <Footer />
     </div>
   );

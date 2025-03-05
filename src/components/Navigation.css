@@ -1,0 +1,68 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navigation li {
+  margin: 0;
+}
+
+.navigation button {
+  background: none;
+  border: none;
+  color: #9fa450;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Стили для навигации на темном фоне (хедер) */
+.navigation.header-visible {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.navigation.header-visible button {
+  color: #ffffff;
+}
+
+.navigation button:hover {
+  transform: scale(1.1);
+}
+
+.navigation button.active {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: 8px 0;
+  }
+
+  .navigation ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 15px;
+  }
+
+  .navigation button {
+    font-size: 12px;
+  }
+} 

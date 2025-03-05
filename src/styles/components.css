@@ -283,7 +283,7 @@ h2:after {
 }
 
 .submit-button {
-  background: linear-gradient(45deg, #fe6a00, #f1a778);  /* Градиент от оранжевого к мандариновому */
+  background: #fe6a00;  /* Градиент от оранжевого к мандариновому */
   color: #FFFFF0;
   border: none;
   width: 100%;
@@ -292,8 +292,9 @@ h2:after {
 }
 
 .submit-button:hover {
-  background: linear-gradient(45deg, #f1a778, #fe6a00);  /* Инвертированный градиент при наведении */
+  background: #fe6a00;  /* Инвертированный градиент при наведении */
   box-shadow: 0 6px 20px rgba(254, 106, 0, 0.3);
+  transform: translateY(-2px);
 }
 
 .add-companion-btn {
