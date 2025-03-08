@@ -369,13 +369,13 @@ h2:after {
     padding: 10px 20px;
   }
 }
-
+/* Обновляем фон футера */
 .footer {
   text-align: center;
   padding: 40px 0;
-  background: rgba(254, 106, 0, 0.05);  /* Нежный оранжевый фон */
-  border-top: 1px solid rgba(254, 106, 0, 0.1);
   color: white;
+  background: #4a3728e7;  /* Нежный оранжевый фон */
+  border-top: rgba(74, 55, 40, 0.589) rgba(254, 106, 0, 0.1);
 }
 
 .checkbox-group {
@@ -1037,11 +1037,7 @@ body {
   background-color: #f8f9fa;  /* Оставляем как есть */
 }   
 
-/* Обновляем фон футера */
-.footer {
-  background: #4a3728;  /* Нежный оранжевый фон */
-  border-top: 1px solid rgba(254, 106, 0, 0.1);
-} 
+
 .telegram-link {
   display: inline-flex;
   align-items: center;
