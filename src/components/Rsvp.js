@@ -18,7 +18,7 @@ const GuestForm = ({ data, onChange, isCompanion = false, alcoholOptions }) => {
               onChange={onChange}
               placeholder="Имя"
               required
-              className="form-input"
+              className="form-input-test"
             />
           </div>
           <div className="form-group">
@@ -29,7 +29,7 @@ const GuestForm = ({ data, onChange, isCompanion = false, alcoholOptions }) => {
               onChange={onChange}
               placeholder="Фамилия"
               required
-              className="form-input"
+              className="form-input-test"
             />
           </div>
         </div>
@@ -39,7 +39,7 @@ const GuestForm = ({ data, onChange, isCompanion = false, alcoholOptions }) => {
         <div className="form-section">
           <div className="form-row">            
             <div className="form-group">
-              <label>Присутствие на банкете</label>
+              <label>Присутствие на мероприятии</label>
               <select name="attendBanquet" value={data.attendBanquet} onChange={onChange} className="form-select">
                 <option value="no">Нет</option>
                 <option value="yes">Да</option>
@@ -58,7 +58,6 @@ const GuestForm = ({ data, onChange, isCompanion = false, alcoholOptions }) => {
       )}
 
       <div className="form-section">
-        <div className="form-section-title">Предпочтения</div>
         <div className="form-group">
           <label>Предпочтения по алкоголю</label>
           <div className="checkbox-group">
@@ -86,7 +85,7 @@ const GuestForm = ({ data, onChange, isCompanion = false, alcoholOptions }) => {
             className="form-select"
           >
             <option value="no">Нет</option>
-            <option value="yes">Да</option>
+            <option value="yes">Есть</option>
           </select>
         </div>
 
@@ -233,7 +232,7 @@ function Rsvp() {
           />
 
           <div className="companions-section">
-            <h3>Добавьте всех с кем вы приедете</h3>            
+            <h3>Добавьте пожалуйста всех с кем вы приедете</h3>            
             {companions.map((companion, index) => (
               <div key={index} className="companion-wrapper">
                 <div className="companion-header">

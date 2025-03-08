@@ -1,11 +1,19 @@
 import React from 'react';
 
-function Footer() {
+function Footer({label = "По всем вопросам телеграмм канал" }) {
+  const telegramUrl = `https://t.me/+ohvrwnhqV4EwYmIy`;
   return (
     <footer className="footer">
       <div className="container">
-        <p>С любовью, Анна и Михаил</p>
-        <p>По всем вопросам: +7 (999) 123-45-67</p>
+        <p>С любовью, Эльза и Даниил</p><a 
+      href={telegramUrl} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="telegram-link"
+    >
+      {label}
+    </a> 
+        
       </div>
     </footer>
   );
