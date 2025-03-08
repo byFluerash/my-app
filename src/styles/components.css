@@ -12,6 +12,19 @@ h2 {
   justify-content: center;
 }
 
+h2guest{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  color: #4a3728;
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h2:before,
 h2:after {
   content: "";
