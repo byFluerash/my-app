@@ -30,7 +30,7 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { id: 'about', label: 'О нас' },
+    { id: 'about', label: 'О свадьбе' },
     { id: 'venue', label: 'Место' },
     { id: 'transfer', label: 'Трансфер' },
     { id: 'color-scheme', label: 'Дресс-код' },

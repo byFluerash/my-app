@@ -37,15 +37,7 @@ const GuestForm = ({ data, onChange, isCompanion = false, alcoholOptions }) => {
 
       {!isCompanion && (
         <div className="form-section">
-          <div className="form-section-title">Присутствие на мероприятиях</div>
-          <div className="form-row">
-            <div className="form-group">
-              <label>Присутствие в Загсе</label>
-              <select name="attendZags" value={data.attendZags} onChange={onChange} className="form-select">
-                <option value="no">Нет</option>
-                <option value="yes">Да</option>
-              </select>
-            </div>
+          <div className="form-row">            
             <div className="form-group">
               <label>Присутствие на банкете</label>
               <select name="attendBanquet" value={data.attendBanquet} onChange={onChange} className="form-select">
@@ -241,12 +233,11 @@ function Rsvp() {
           />
 
           <div className="companions-section">
-            <h3>Сопровождающие</h3>
-            
+            <h3>Добавьте всех с кем вы приедете</h3>            
             {companions.map((companion, index) => (
               <div key={index} className="companion-wrapper">
                 <div className="companion-header">
-                  <h4>Сопровождающий {index + 1}</h4>
+                  <h4>Гость {index + 1}</h4>
                   <button 
                     type="button" 
                     className="remove-companion-btn"
@@ -269,7 +260,7 @@ function Rsvp() {
               className="add-companion-btn"
               onClick={addCompanion}
             >
-              + Добавить сопровождающего
+              + Добавить гостя
             </button>
           </div>
 
