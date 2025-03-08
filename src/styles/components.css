@@ -1064,3 +1064,31 @@ body {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
+
+.telegram-link-transfer {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  font-weight: 500;
+  color: #4a3728;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.telegram-link-transfer:hover {
+  background-color: #1C94CC; /* Темнее при наведении */
+  transform: scale(1.05); /* Легкий эффект увеличения */
+}
+
+.telegram-link-transfer:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.custom-image {
+  width: 200px; /* Устанавливаем ширину */
+  height: auto; /* Сохраняем пропорции */
+  border-radius: 10px; /* Добавляем скругленные углы */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}

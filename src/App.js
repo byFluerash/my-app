@@ -9,10 +9,12 @@ import Rsvp from './components/Rsvp';
 import Footer from './components/Footer';
 import Venue from './components/Venue';
 import Navigation from './components/Navigation';
+import FixedTelegramLink from './components/FixedTelegramLink';
 
 function App() {
   return (
     <div>
+      <FixedTelegramLink />
       <Navigation />
       <section id="header">
       <Header />

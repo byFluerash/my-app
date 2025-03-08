@@ -1,6 +1,8 @@
 import React from 'react';
+import QR from '../assets/qr.png';
 
 function Transfer() {
+
   return (
     <section className="transfer">
       <div className="container">
@@ -30,8 +32,14 @@ function Transfer() {
           
           <div className="transfer-note">
             <p>
-              Точное место и время отправления на площадку будет согласовано позже, в зависимости от места проживания гостей.        
+              Точное место и время отправления на площадку будет согласовано позже, в зависимости от места проживания гостей. 
+              Вся информация будет в нашем  
             </p>
+            <img 
+        src={QR} 
+        alt="Описание изображения" 
+        className="custom-image"
+      />
           </div>
         </div>
       </div>
