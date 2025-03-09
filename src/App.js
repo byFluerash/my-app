@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Venue from './components/Venue';
 import Navigation from './components/Navigation';
 import FixedTelegramLink from './components/FixedTelegramLink';
+import Timer from './components/Timer';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
       </section>
       <section id="rsvp">
         <Rsvp />
+      </section>
+      <section id="timer">
+        <Timer />
       </section>
       <Footer />
     </div>
