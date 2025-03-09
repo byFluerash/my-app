@@ -4,7 +4,7 @@ function Venue() {
   return (
     <section className="venue">
       <div className="container">
-        <h2>Место проведения</h2>
+        <h2 className='h2title'>Место проведения</h2>
         <div className="venue-content">
           <div className="venue-items">
              <div className="venue-item">

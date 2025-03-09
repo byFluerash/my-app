@@ -1,4 +1,5 @@
 /* В начале файла добавляем общие стили для всех h2 */
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
@@ -165,6 +166,13 @@ h2:after {
 .couple-story p {
   margin-bottom: 20px;
   padding: 0 20px;
+}
+
+.couple-story-unic {
+  text-align: center;
+  line-height: 1.8;
+  font-family: 'Marck Script', cursive;
+  font-size: 1.4rem;
 }
 
 /* Добавляем адаптивность */

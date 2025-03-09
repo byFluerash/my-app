@@ -5,8 +5,8 @@ function About() {
     <section className="about">
       <div className="container">
         <h2 className="h2guest">Дорогие гости!</h2>
-        <div className="couple-story">
-          <p>
+        <div className="couple-story-unic">
+          <p className="couple-story-unic">
            Мы счастливы пригласить вас на нашу свадебную вечеринку!       
            </p>
            <p>
