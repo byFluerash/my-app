@@ -400,47 +400,13 @@ h2:after {
     padding: 10px 20px;
   }
 }
-/* Обновляем стили для футера и добавляем плавный переход */
+/* Обновляем фон футера */
 .footer {
   text-align: center;
   padding: 40px 0;
   color: white;
-  background: linear-gradient(to bottom, rgba(74, 55, 40, 0.8), rgba(74, 55, 40, 0.95));
-  position: relative;
-  overflow: hidden;
-}
-
-/* Добавляем декоративный элемент для плавного перехода */
-.footer::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: 0;
-  right: 0;
-  height: 50px;
-  background: linear-gradient(to bottom, transparent, rgba(74, 55, 40, 0.8));
-}
-
-/* Добавляем тонкий узор на фон */
-.footer::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 8px),
-    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 30px 30px, 20px 20px;
-  opacity: 0.3;
-  z-index: 1;
-}
-
-/* Обеспечиваем, чтобы контент футера был поверх узора */
-.footer * {
-  position: relative;
-  z-index: 2;
+  background: rgba(0, 0, 0, 0.5); 
+  border-top: rgba(74, 55, 40, 0.589) rgba(254, 106, 0, 0.1);
 }
 
 .checkbox-group {
@@ -1053,132 +1019,55 @@ h2:after {
 }
 
 /* Общий фон для всей страницы */
-body{
-  background-color: rgba(253, 222, 82, 0.02);
-  background-image: 
-    /* Нежные цветочные элементы */
-    radial-gradient(circle at 50% 50%, rgba(241, 167, 120, 0.03) 0%, transparent 8px),
-    radial-gradient(circle at 50% 50%, rgba(159, 164, 80, 0.03) 0%, transparent 15px),
-    
-    /* Декоративные точки */
-    radial-gradient(circle at 25% 25%, rgba(254, 106, 0, 0.02) 1px, transparent 1px),
-    radial-gradient(circle at 75% 75%, rgba(241, 167, 120, 0.02) 1px, transparent 1px),
-    
-    /* Тонкие линии */
-    linear-gradient(45deg, transparent 96%, rgba(159, 164, 80, 0.04) 97%),
-    linear-gradient(-45deg, transparent 96%, rgba(254, 106, 0, 0.04) 97%);
-  background-size: 
-    30px 30px,
-    50px 50px,
-    20px 20px,
-    20px 20px,
-    100px 100px,
-    100px 100px;
-  background-position: 
-    0 0,
-    25px 25px,
-    0 0,
-    10px 10px,
-    0 0,
-    50px 50px;
-  animation: backgroundShift 60s linear infinite;
+body {
+  background: rgba(253, 222, 82, 0.02);  /* Очень нежный горчичный фон */
 }
 
-/* Добавляем уникальные фоны для разных секций */
-.about {
-  background-image: 
-    radial-gradient(circle at 10% 10%, rgba(241, 167, 120, 0.02) 0%, transparent 100px),
-    radial-gradient(circle at 90% 90%, rgba(159, 164, 80, 0.02) 0%, transparent 100px);
+/* Обновляем фон для всех секций */
+.about, 
+.venue, 
+.transfer, 
+.color-scheme, 
+.gifts, 
+.rsvp {
+  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
+  position: relative;
 }
 
-.venue {
-  background-image: 
-    linear-gradient(45deg, transparent 95%, rgba(254, 106, 0, 0.03) 95%),
-    linear-gradient(-45deg, transparent 95%, rgba(241, 167, 120, 0.03) 95%);
-  background-size: 30px 30px;
-}
-
-.transfer {
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(159, 164, 80, 0.02) 0%, transparent 1px),
-    radial-gradient(circle at 50% 50%, rgba(254, 106, 0, 0.02) 0%, transparent 2px);
-  background-size: 20px 20px, 40px 40px;
-}
-
-.color-scheme {
-  background-image: 
-    linear-gradient(0deg, transparent 95%, rgba(241, 167, 120, 0.03) 95%),
-    linear-gradient(90deg, transparent 95%, rgba(159, 164, 80, 0.03) 95%);
-  background-size: 30px 30px;
-}
-
-.gifts {
-  background-image: 
-    radial-gradient(circle at 30% 30%, rgba(254, 106, 0, 0.02) 0%, transparent 60px),
-    radial-gradient(circle at 70% 70%, rgba(241, 167, 120, 0.02) 0%, transparent 60px);
-}
-
-/* Убираем эффект для rsvp, timer, footer */
-
-
-/* Добавляем эффект перехода между секциями */
-.about::after,
-.venue::after,
-.transfer::after,
-.color-scheme::after,
-.gifts::after,
-.timer::after,
-.footer::after {
+/* Добавляем разделители между секциями */
+.about:before, 
+.venue:before, 
+.transfer:before, 
+.color-scheme:before, 
+.gifts:before, 
+.rsvp:before {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  height: 50px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
   background: linear-gradient(
-    to bottom,
-    rgba(253, 222, 82, 0.02),
+    to right,
+    transparent,
+    rgba(254, 106, 0, 0.1),  /* Оранжевый */
     transparent
   );
-  top: 0;
-  z-index: 1;
 }
 
-/* Добавляем анимацию для фоновых элементов */
-@keyframes backgroundShift {
-  0% {
-    background-position: 0 0,
-      25px 25px,
-      0 0,
-      10px 10px,
-      0 0,
-      50px 50px;
-  }
-  100% {
-    background-position: 50px 50px,
-      75px 75px,
-      20px 20px,
-      30px 30px,
-      100px 100px,
-      150px 150px;
-  }
+/* Чередуем фоны секций для визуального разделения */
+.venue,
+.color-scheme,
+.rsvp {
+  background: rgba(159, 164, 80, 0.02);  /* Очень нежный оливковый фон */
 }
 
-body {
-  animation: backgroundShift 60s linear infinite;
+/* Оставляем хедер без изменений, так как у него своя фоновая картинка */
+.header {
+  background-color: #f8f9fa;  /* Оставляем как есть */
 }
 
-/* Медиа-запросы для адаптивности */
-@media (max-width: 768px) {
-  body {
-    background-size: 
-      20px 20px,
-      30px 30px,
-      15px 15px,
-      15px 15px,
-      50px 50px,
-      50px 50px;
-  }
-}
 
 .telegram-link {
   display: inline-flex;
