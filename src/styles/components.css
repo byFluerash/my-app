@@ -15,7 +15,7 @@ h2 {
 }
 
 h2guest {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
   color: #4a3728;
   margin-bottom: 50px;
@@ -120,7 +120,7 @@ h2:after {
 }
 
 .header h1 {
-  font-family: 'Italianno'; 
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(3rem, 8vw, 6rem);
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -135,12 +135,8 @@ h2:after {
 
 .about {
   padding: 80px 0;
-  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
+  background: rgba(248, 125, 48, 0.808);  /* Очень нежный мандариновый фон */
   color: #4a3728;
-}
-
-.about .container {
-  max-width: 800px;  /* Уменьшаем ширину контейнера для лучшей читаемости */
 }
 
 .about:before {
@@ -167,7 +163,7 @@ h2:after {
 
 
 .about h2{
-  font-family: 'Great Vibes', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
 }
 
@@ -186,8 +182,8 @@ h2:after {
 .couple-story-unic {
   text-align: center;
   line-height: 1.8;
-  font-family: 'Great Vibes', serif;
-  font-size: 1.8rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
 }
 
 /* Добавляем адаптивность */
@@ -829,7 +825,7 @@ h2:after {
 
 .gifts {
   padding: 80px 0;
-  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
+  background: rgb(241, 166, 120);  /* Очень нежный мандариновый фон */
   color: #4a3728;
 }
 
@@ -903,7 +899,7 @@ h2:after {
 
 .venue {
   padding: 80px 0;
-  background: rgba(159, 164, 80, 0.02);  /* Очень нежный оливковый фон */
+  background: #9ea4506a;  /* Очень нежный оливковый фон */
   color: #4a3728;
 }
 
@@ -1025,12 +1021,11 @@ h2:after {
 
 /* Общий фон для всей страницы */
 body {
-  background: rgba(253, 222, 82, 0.02);  /* Очень нежный горчичный фон */
+  background: rgb(255, 255, 240);  /* Очень нежный горчичный фон */
 }
 
 /* Обновляем фон для всех секций */
 .about, 
-.venue, 
 .transfer, 
 .color-scheme, 
 .gifts, 
@@ -1062,7 +1057,7 @@ body {
 }
 
 /* Чередуем фоны секций для визуального разделения */
-.venue,
+
 .color-scheme,
 .rsvp {
   background: rgba(159, 164, 80, 0.02);  /* Очень нежный оливковый фон */
@@ -1172,7 +1167,7 @@ body {
 
 .timer-block span {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight:normal;
 }
 
 .timer-block p {
