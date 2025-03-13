@@ -193,6 +193,7 @@ function Rsvp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Сохраняем в Firebase
       const rsvpsRef = collection(db, 'rsvps');
       await addDoc(rsvpsRef, {
         mainGuest,
@@ -200,6 +201,16 @@ function Rsvp() {
         message,
         timestamp: new Date().toISOString(),
       });
+
+      // Отправляем уведомление на почту
+      await fetch('/api/send-rsvp-notification', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ mainGuest, companions }),
+      });
+
       setSubmitted(true);
     } catch (error) {
       console.error('Ошибка:', error);

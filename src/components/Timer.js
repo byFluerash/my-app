@@ -29,9 +29,14 @@ function Timer() {
 
     return (
         <div className="timer-container">
-            <div className="timer-background" style={{backgroundImage: `url(${require('../assets/header_background.JPG')})`}}>
+            <div className="timer-background" style={{
+                backgroundImage: `url(${require('../assets/timer.jpg')})`,
+                maxWidth: '500px',  // Максимальная ширина
+                margin: '0 auto',   // Центрирование
+                width: '90%'        // Адаптивная ширина
+            }}>
                 <div className="timer-overlay">
-                    <h2>До начала осталось:</h2>
+                    <h2>До начала</h2>
                     <div className="timer-digits">
                         <div className="timer-block">
                             <span>{timeLeft.days}</span>
