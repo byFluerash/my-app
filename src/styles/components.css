@@ -824,8 +824,8 @@ h2:after {
 
 .gifts {
   padding: 80px 0;
-  background: rgb(241, 166, 120);  /* Очень нежный мандариновый фон */
-  color: #4a3728;
+  background: #4a3728d7;   /* Очень нежный мандариновый фон */
+  color: #fffff0c5;
 }
 
 .gifts:before {
@@ -863,7 +863,6 @@ h2:after {
 
 .gifts-note {
   padding: 30px;
-  background: rgba(253, 222, 82, 0.05);
   border-radius: 15px;
   margin-top: 40px;
 }
@@ -872,8 +871,16 @@ h2:after {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
   line-height: 1.8;
-  color: #4a3728;
+  color: #fffff0c5;
   font-style: italic;
+}
+
+.gifts h2{
+  color: #fffff0c5;
+}
+.gifts h2:after,
+.gifts h2:before {
+  background: #ffffff; /* Устанавливаем белый цвет для псевдоэлементов */
 }
 
 @media (max-width: 768px) {
@@ -1028,7 +1035,6 @@ body {
 .about, 
 .transfer, 
 .color-scheme, 
-.gifts, 
 .rsvp {
   background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
   position: relative;
@@ -1181,4 +1187,33 @@ body {
 
 .timer-overlay h2::after h2::before {
   background: #FFFFF0;
+}
+.photo-gallery {
+  width: 50%; /* Уменьшаем ширину для компьютеров */
+  margin: 0 auto; /* Центрируем */
+}
+
+@media (max-width: 768px) {
+  .photo-gallery {
+    width: 100%; /* Для мобильных устройств оставляем ширину 100% */
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение для мобильных устройств */
+  }
+
+  .photo-gallery img {
+    width: 100%; /* Устанавливаем ширину изображений на 100% */
+    height: auto; /* Сохраняем пропорции */
+    margin-bottom: 10px; /* Отступ между изображениями */
+  }
+}
+
+
+.gift-background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 1%;
+  overflow: hidden;
 }
