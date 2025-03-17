@@ -14,6 +14,16 @@ h2 {
   justify-content: center;
 }
 
+/* Обновляем фон для всех секций */
+.venue,
+.about, 
+.transfer, 
+.color-scheme, 
+.rsvp {
+  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
+  position: relative;
+}
+
 h2guest {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
@@ -170,7 +180,7 @@ h2:after {
   text-align: center;
   line-height: 1.8;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .couple-story p {
@@ -516,7 +526,6 @@ h2:after {
 
 .color-scheme {
   padding: 80px 0;
-  background: rgba(159, 164, 80, 0.02);  /* Очень нежный оливковый фон */
   color: #4a3728;
 }
 
@@ -541,7 +550,7 @@ h2:after {
   max-width: 800px;
   margin: 0 auto 60px;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1.8;
 }
 
@@ -626,11 +635,14 @@ h2:after {
 
 .form-group {
   margin-bottom: 20px;
+  margin-left: 6%;
+  margin-right: auto;
 }
 
 .form-group label {
   display: block;
   margin-bottom: 12px;
+  margin-left: 12px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.2rem;
   color: #4a3728;
@@ -649,8 +661,7 @@ h2:after {
 .form-input,
 .form-select,
 .form-textarea {
-  width: 100%;
-  padding: 15px;
+  width: 90%;
   border: 1px solid rgba(159, 164, 80, 0.2);
   border-radius: 8px;
   font-size: 1.1rem;
@@ -729,8 +740,7 @@ h2:after {
 }
 
 .transfer {
-  padding: 80px 0;
-  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
+  padding: 80px 0; /* Очень нежный мандариновый фон */
   color: #4a3728;
 }
 
@@ -825,7 +835,7 @@ h2:after {
 .gifts {
   padding: 80px 0;
   background: #4a3728d7;   /* Очень нежный мандариновый фон */
-  color: #fffff0c5;
+  color: #fffff0;
 }
 
 .gifts:before {
@@ -856,7 +866,7 @@ h2:after {
 
 .gifts-description p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1.8;
   margin-bottom: 20px;
 }
@@ -876,7 +886,7 @@ h2:after {
 }
 
 .gifts h2{
-  color: #fffff0c5;
+  color: #fffff0e6;
 }
 .gifts h2:after,
 .gifts h2:before {
@@ -904,8 +914,7 @@ h2:after {
 }
 
 .venue {
-  padding: 80px 0;
-  background: #9ea45000;  /* Очень нежный оливковый фон */
+  padding: 80px 0; 
   color: #4a3728;
 }
 
@@ -1030,44 +1039,8 @@ body {
   background: rgba(255, 255, 240, 0.4);  /* Очень нежный горчичный фон */
 }
 
-/* Обновляем фон для всех секций */
-.venue
-.about, 
-.transfer, 
-.color-scheme, 
-.rsvp {
-  background: rgba(241, 167, 120, 0.02);  /* Очень нежный мандариновый фон */
-  position: relative;
-}
 
-/* Добавляем разделители между секциями */
-.about:before, 
-.venue:before, 
-.transfer:before, 
-.color-scheme:before, 
-.gifts:before, 
-.rsvp:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(254, 106, 0, 0.1),  /* Оранжевый */
-    transparent
-  );
-}
 
-/* Чередуем фоны секций для визуального разделения */
-
-.color-scheme,
-.rsvp {
-  background: rgba(159, 164, 80, 0.02);  /* Очень нежный оливковый фон */
-}
 
 /* Оставляем хедер без изменений, так как у него своя фоновая картинка */
 .header {
