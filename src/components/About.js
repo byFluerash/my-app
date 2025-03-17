@@ -5,7 +5,7 @@ import kobrino3 from '../assets/кобрино церемония.jpg';
 
 function About() {
   return (
-    <section className="about" style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <section className="about" >
       <div className="container">
         <h2 className="h2guest">Дорогие гости!</h2>
         <div className="couple-story-unic">

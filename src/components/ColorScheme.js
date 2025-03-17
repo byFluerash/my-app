@@ -1,7 +1,7 @@
 import React from 'react';
-import kobrino1 from '../assets/кобрино велком.webp';
-import kobrino2 from '../assets/кобрино с высоты.jpg';
-import kobrino3 from '../assets/кобрино церемония.jpg';
+import photo1 from '../assets/дресс-код девушки.jpg';
+import photo2 from '../assets/дресс-код мужчины.jpg';
+import photo3 from '../assets/дресс-код девушки 2.jpg';
 
 
 function ColorScheme() {
@@ -42,13 +42,17 @@ function ColorScheme() {
               Для дам - любой наряд в этой палитре
           </p>
         </div>  
-        <div className="photo-gallery" >
-            <img src={kobrino3} alt="Описание фото 1" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
-            <div className="small-photos" style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
-              <img src={kobrino2} alt="Описание фото 2" style={{ width: '48%', height: 'auto', borderRadius: '8px' }} />
-              <img src={kobrino1} alt="Описание фото 3" style={{ width: '48%', height: 'auto', borderRadius: '8px' }} />
-            </div>
-          </div>
+        <div className="photo-gallery" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'nowrap' }}>
+            <img src={photo1} alt="Описание фото 1" style={{ maxWidth: '40%', height: 'auto', margin: '5px', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', transition: 'transform 0.2s' }} 
+                 onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'} 
+                 onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'} />
+            <img src={photo2} alt="Описание фото 2" style={{ maxWidth: '40%', height: 'auto', margin: '5px', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', transition: 'transform 0.2s' }} 
+                 onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'} 
+                 onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'} />
+            <img src={photo3} alt="Описание фото 3" style={{ maxWidth: '40%', height: 'auto', margin: '5px', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', transition: 'transform 0.2s' }} 
+                 onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'} 
+                 onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'} />
+        </div>
         </div>        
       </div>
       
