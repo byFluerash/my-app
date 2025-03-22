@@ -5,7 +5,10 @@ function Footer({label = "По всем вопросам телеграмм ка
   return (
     <footer className="footer">
       <div className="container">
-        <p>С любовью, Эльза и Даниил</p><a 
+        <p> 
+          Просим вас расслабиться и погрузиться в атмосферу праздника. Все детали мероприятия уже продуманы. Ваша задача - наслаждаться!
+        </p>
+        <p>С любовью, Даниил и Эльза</p><a 
       href={telegramUrl} 
       target="_blank" 
       rel="noopener noreferrer"
